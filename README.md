@@ -1,6 +1,8 @@
 # React Boiler Storybook
 
-##yarn 
+### run first
+
+## yarn 
 ## `yarn dev -- for starting web development`
 ## `yarn storybook --for starting storybook components`
 storybook start with port 6006
