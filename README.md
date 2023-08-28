@@ -1,4 +1,9 @@
-# React + Vite
+# React Boiler Storybook
+
+##yarn 
+## yarn dev -- for starting web development
+## yarn storybook --for starting storybook components
+storybook start with port 6006
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
