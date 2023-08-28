@@ -1,7 +1,9 @@
 import { createTheme } from "@mui/material"
 import { globalTheme } from "./theme"
-import { useAppSelector } from "../../store"
-// import { componentThemes } from './components/componentThemes'
+import { useAppSelector } from "@dispatch/index"
+
+import "@fontsource/roboto"
+import "@fontsource/poppins"
 
 export const useConsumTheme = () => {
   const theme = useAppSelector((state) => state.theme)
@@ -20,7 +22,5 @@ export const useConsumTheme = () => {
     breakpoints: {
       ...globalTheme.breakpoints,
     },
-    // components: componentThemes(theme),
-    shadows: globalTheme.shadows,
   })
 }

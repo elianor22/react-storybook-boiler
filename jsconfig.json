@@ -3,13 +3,19 @@
         "baseUrl": ".",
         "paths": {
             "@components/*": [
-                "src/component/s*"
+                "src/components/*"
             ],
             "@themeComponents/*": [
                 "src/theme/components/*"
             ],
             "@layouts/*": [
                 "src/layouts/*"
+            ],
+            "@dispatch/*": [
+                "src/store/*"
+            ],
+            "@selector/*": [
+                "src/store/reducers/*"
             ],
             "@utils/*": [
                 "src/utils/*"

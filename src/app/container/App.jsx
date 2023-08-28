@@ -1,9 +1,10 @@
-import { CssBaseline, ThemeProvider, createTheme } from "@mui/material"
+import { CssBaseline, ThemeProvider } from "@mui/material"
 import { default as AppComponent } from "../App/App"
+import { useConsumTheme } from "src/theme/utils/useCustomTheme"
 // import { useConsumTheme } from "../../theme/utils/useCustomTheme"
 
 export function App() {
-  const theme = createTheme()
+  const theme = useConsumTheme()
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />

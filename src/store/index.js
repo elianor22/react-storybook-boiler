@@ -1,7 +1,7 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit"
 import { useDispatch, useSelector } from "react-redux"
-import { myReducer } from "./reducer/myReducer"
-import { themeReducer } from "./reducer/themeReducer"
+import { myReducer } from "./reducers/myReducer"
+import { themeReducer } from "./reducers/themeReducer"
 
 export const reducer = combineReducers({
   myReducer: myReducer,

@@ -1,8 +1,8 @@
 export const colorVariant = {
   "background.1": {
-    light: "#FAFAFA",
-    dark: "#030E15",
-    main: "#030E15",
+    light: "#FFFFFF",
+    dark: "#1B2430",
+    main: "#FAFAFA",
   },
 
   "typo.1": {

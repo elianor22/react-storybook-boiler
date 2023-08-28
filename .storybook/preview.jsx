@@ -1,8 +1,11 @@
 /** @type { import('@storybook/react').Preview } */
 
-import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
-import { themes } from "@storybook/theming";
-import { useDarkMode } from "storybook-dark-mode";
+import { CssBaseline, ThemeProvider, createTheme } from "@mui/material"
+import { themes } from "@storybook/theming"
+import { useDarkMode } from "storybook-dark-mode"
+import { globalTheme } from "../src/theme/utils/theme"
+import "@fontsource/roboto"
+import "@fontsource/poppins"
 export const preview = {
   parameters: {
     actions: { argTypesRegex: "^on[A-Z].*" },
@@ -12,7 +15,7 @@ export const preview = {
         date: /Date$/,
       },
     },
-    docs:{
+    docs: {
       theme: themes.dark,
     },
     backgrounds: {
@@ -30,31 +33,30 @@ export const preview = {
       },
     },
   },
-};
+}
 
 const withMuiTheme = (Story, { args }) => {
-  const darkMode = useDarkMode() || args.theme === "dark";
+  const darkMode = useDarkMode() || args.theme === "dark"
 
   const theme = createTheme({
     palette: {
       mode: darkMode ? "dark" : "light",
-      // ...globalTheme.palette,
+      ...globalTheme.palette,
     },
-    // typography: {
-    //   ...globalTheme.typography,
-    // },
-    // breakpoints: {
-    //   ...globalTheme.breakpoints,
-    // },
-  });
+    typography: {
+      ...globalTheme.typography,
+    },
+    breakpoints: {
+      ...globalTheme.breakpoints,
+    },
+  })
 
   return (
     <ThemeProvider theme={theme}>
-      <CssBaseline>
-        <Story />
-      </CssBaseline>
+      {/* <CssBaseline /> */}
+      <Story />
     </ThemeProvider>
-  );
-};
+  )
+}
 
-export const decorators = [withMuiTheme];
+export const decorators = [withMuiTheme]
